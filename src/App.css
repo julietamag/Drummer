@@ -3,7 +3,7 @@
 }
 
 .App{
-  background-color: #390099;
+  background-color: #062726;
   display: flex;
   align-items: center;
   justify-content:center;
@@ -11,27 +11,100 @@
 }
 
 #drum-machine{
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background-color: #E2CFEA;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   width: 40rem;
+  border: 8px solid #6247aa;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #drum-pad{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
   text-align: center;
   grid-gap: 1rem;
   padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.drum-pad{
+  border: 1px solid #6247aa;
+  font-size: 2rem;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  background-color: #A06CD5;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  color: white;
+  font-weight: 700;
+}
+
+#nameDisplayer{
+  background-color: #A06CD5;
+  border-radius: 1rem;
+  color: aliceblue;
+  max-inline-size: 15rem;
+  overflow-wrap: break-word;
+  margin-top: 2rem;
+}
+
+#controller{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 1rem;
+  border: 2px solid #062726;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;}
+
+#display .true {
+  background-color: #C03221 !important; 
+}
+
+#controller-btns{
+  margin: 2rem 0 4rem 0; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 10rem;
+}
+
+#controller-btns button{
+  width: 4rem;
+}
+
+#volume{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 2rem;
+}
+
+
+#volume input{
+  margin: 2rem auto;
+}
+
+#mute-btn{
+    background-color: aliceblue;
+    color: black;
+    text-align: center;
 }
 
 @media screen and (max-width: 600px){
   #drum-machine{
     width: 20rem;
-    height: 40rem;
+    height: fit-content;
+    display: flex;
     flex-direction: column;
   }
   
 }
+
